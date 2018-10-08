@@ -20,7 +20,7 @@ from django.views.generic import TemplateView
 from users.views import LoginView, RegisterView, ForgetPwdView, LogOutView
 from users.views import ActiveUserView, ResetView, ModifyPwdView, IndexView
 from django.views.static import serve
-from online_education.settings import MEDIA_ROOT, STATIC_ROOT
+from online_education.settings import MEDIA_ROOT #, #STATIC_ROOT
 
 
 urlpatterns = [
@@ -45,7 +45,10 @@ urlpatterns = [
     # 配置上传文件的访问处理函数
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
     # 静态文件的查找debug为false的时候
-    url(r'^static/(?P<path>.*)$', serve, {"document_root": STATIC_ROOT}),
+   # url(r'^static/(?P<path>.*)$', serve, {"document_root": STATIC_ROOT}),
+    # 富文本相关url
+    url(r'^ueditor/', include('DjangoUeditor.urls')),
+
 ]
 
 # 全局404

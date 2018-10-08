@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 SECRET_KEY = 'w!p8k)$j$t#c6!1s&4fvuf1hus)*d6elqnjv1le77*z(fjw3^9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -51,6 +51,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'captcha',
     'pure_pagination',
+    'DjangoUeditor',
+
+
 ]
 AUTH_USER_MODEL = 'users.UserProfile'
 
@@ -158,4 +161,4 @@ EMAIL_FROM = "w18804928235@sina.com"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # 生产环境下，debug为false的时候不会自己查找static文件。需要配置。
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
