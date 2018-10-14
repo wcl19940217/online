@@ -153,10 +153,10 @@ STATICFILES_DIRS = [
 ]
 EMAIL_HOST = "smtp.sina.com"
 EMAIL_PORT = 25
-EMAIL_HOST_USER = "w18804928235@sina.com"
-EMAIL_HOST_PASSWORD = "tana248654"
+EMAIL_HOST_USER = "******@sina.com"
+EMAIL_HOST_PASSWORD = "*****"
 EMAIL_USE_TLS = False
-EMAIL_FROM = "w18804928235@sina.com"
+EMAIL_FROM = "******@sina.com"
 # 头像等照片的存储
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
